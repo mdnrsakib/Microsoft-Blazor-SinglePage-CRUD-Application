@@ -1,0 +1,59 @@
+﻿@page "/TourPackages/List"
+@using Blazor_Create_Update_Delete.Shared.DTO;
+@using System.Net.Http.Json;
+@inject HttpClient http
+<div class="row">
+    <div class="col-12">
+        <h3 style="text-align:center">Tour Package</h3><hr />
+        <div class="d-flex justify-content-end mb-1">
+            <a href="/TourPackages/Create" class="btn btn-primary btn-sm">Create</a>
+        </div>
+        @if (tourpackage is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Package name</th>
+                        <th>Package Category</th>
+                        <th>Cost Per Person</th>
+                        <th>Tour Time</th>
+                        <th>...</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var c in tourpackage)
+                    {
+                        <tr>
+                            <td>@c.PackageName</td>
+                            <td>@c.PackageCategory</td>
+                            <td>@c.CostPerPerson.ToString("0.00")</td>
+                            <td>@c.TourTime</td>
+                            <th>
+                                <a class="btn btn-success btn-sm" href="/TourPackages/edit/@c.TourPackageId"><i class="bi bi-pencil"></i></a>
+                                <a class="btn btn-danger btn-sm @getDisabledClass(c.CanDelete)" href="/TourPackages/delete/@c.TourPackageId"><i class="bi bi-trash"></i></a>
+                            </th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+@code {
+    private TourPackageDTO[]? tourpackage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        tourpackage = await this.http.GetFromJsonAsync<TourPackageDTO[]>("api/TourPackages/DTO");
+    }
+    public string getDisabledClass(bool canDelete)
+    {
+        return canDelete ? "" : "disabled";
+    }
+
+}

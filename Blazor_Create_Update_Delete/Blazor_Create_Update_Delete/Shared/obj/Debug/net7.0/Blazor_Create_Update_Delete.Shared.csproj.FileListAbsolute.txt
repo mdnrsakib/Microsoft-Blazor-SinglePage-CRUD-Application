@@ -1,0 +1,96 @@
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+G:\1268589\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+H:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+K:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+I:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+G:\Monthly 10\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+C:\Users\user\Desktop\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+E:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.deps.json
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\bin\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.AssemblyReference.cache
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.GeneratedMSBuildEditorConfig.editorconfig
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfoInputs.cache
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.AssemblyInfo.cs
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.csproj.CoreCompileInputs.cache
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.dll
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\refint\Blazor_Create_Update_Delete.Shared.dll
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\Blazor_Create_Update_Delete.Shared.pdb
+J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Shared\obj\Debug\net7.0\ref\Blazor_Create_Update_Delete.Shared.dll

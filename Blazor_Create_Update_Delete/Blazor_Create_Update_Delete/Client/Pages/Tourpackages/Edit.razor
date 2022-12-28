@@ -1,0 +1,88 @@
+﻿@page "/TourPackages/Edit/{id:int}"
+@inject HttpClient http
+@inject IToastService toastService
+@using Blazor_Create_Update_Delete.Shared.Models;
+@using System.Net.Http.Json;
+@using Blazored.Toast.Services;
+
+<div class="row">
+    <div class="col-12">
+        @if (tourpackage is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <EditForm Model="@tourpackage" OnValidSubmit="SaveTourPackages">
+                <h3 style="text-align:center">Edit TourPackage</h3><hr />
+            <DataAnnotationsValidator />
+            <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@tourpackage.PackageName">Package Name</label>
+                <div class="col-4">
+                    <InputText @bind-Value="tourpackage.PackageName" class="form-control" />
+                    <ValidationMessage For="@(()=> tourpackage.PackageName)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                    <label for="@tourpackage.PackageCategory" class="col-form-label col-form-label-sm col-2 text-end">Package Category</label>
+                <div class="col-4">
+                    <InputSelect @bind-Value="tourpackage.PackageCategory" class="form-select form-select-sm">
+                        <option value="0">Select</option>
+                        @if (packageCategory is not null)
+                        {
+                            @for (var i = 0; i < packageCategory.Length; i++)
+                            {
+                                <option value="@packageCategory[i]">@packageCategory[i]</option>
+                            }
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(()=> tourpackage.PackageCategory)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@tourpackage.CostPerPerson">Cost Per Person</label>
+                <div class="col-4">
+                    <InputNumber @bind-Value="tourpackage.CostPerPerson" class="form-control" />
+                    <ValidationMessage For="@(()=>tourpackage.CostPerPerson)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@tourpackage.TourTime">TourTime</label>
+                <div class="col-4">
+                    <InputNumber @bind-Value="tourpackage.TourTime" class="form-control" />
+                    <ValidationMessage For="@(()=>tourpackage.TourTime)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <div class="col-4 offset-2">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </EditForm>
+        }
+    </div>
+    <div class="col-12">
+        <a href="/TourPackages/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    private TourPackage? tourpackage = default!;
+    string[]? packageCategory;
+    protected override async Task OnInitializedAsync()
+    {
+        packageCategory = Enum.GetNames(typeof(PakageCategory));
+        tourpackage = await http.GetFromJsonAsync<TourPackage>($"api/TourPackages/{id}");
+    }
+    private async Task SaveTourPackages()
+    {
+        var respose = await http.PutAsJsonAsync($"api/TourPackages/{id}", tourpackage);
+        if (respose.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data updated successsfully", "Success");
+
+        }
+    }
+}

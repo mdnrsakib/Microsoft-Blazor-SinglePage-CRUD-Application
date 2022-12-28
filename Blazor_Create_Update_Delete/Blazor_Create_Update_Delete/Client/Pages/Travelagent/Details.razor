@@ -1,0 +1,72 @@
+﻿@page "/TravelAgents/Details/{id:int}"
+@inject HttpClient http
+<div class="row">
+    <div class="row">
+        <h3 style="text-align:center">TravelAgents Details</h3>
+        <hr />
+        @if (travelAgentView is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <div class="row mb-1">
+                <label class="col-2 text-end">Agent Name</label>
+                <div class="col-10">
+                    @travelAgentView.AgentName
+                </div>
+            </div>
+            <div class="row mb-1">
+                <label class="col-2 text-end">Email</label>
+                <div class="col-10">
+                    @travelAgentView.Email
+                </div>
+            </div>
+            <div class="row mb-1">
+                <label class="col-2 text-end">AgentAddress</label>
+                <div class="col-10">
+                    @travelAgentView.AgentAddress
+                </div>
+            </div>
+            @if (agentTourPackagesViewDTOs is not null)
+            {
+                <div><h4 style="text-align:center">Packages</h4><hr /></div>
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Package Name</th>
+                            <th>Cost Per Person</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var oi in agentTourPackagesViewDTOs)
+                        {
+                            <tr>
+                                <td>@oi.PackageName</td>
+                                <td>@oi.CostPerPerson</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        }
+    </div>
+    <div class="col-12">
+        <a href="/TravelAgents/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    private TravelAgentViewDTO? travelAgentView;
+    private AgentTourPackagesViewDTO[]? agentTourPackagesViewDTOs;
+    protected override async Task OnInitializedAsync()
+    {
+        travelAgentView = await http.GetFromJsonAsync<TravelAgentViewDTO>($"api/TravelAgents/DTO/{id}");
+        if (travelAgentView is not null)
+        {
+            agentTourPackagesViewDTOs = await http.GetFromJsonAsync<AgentTourPackagesViewDTO[]>($"api/TravelAgents/Items/{id}");
+        }
+    }
+}

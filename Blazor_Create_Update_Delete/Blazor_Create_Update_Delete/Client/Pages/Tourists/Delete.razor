@@ -1,0 +1,85 @@
+﻿@page "/Tourists/Delete/{id:int}"
+@inject HttpClient http;
+@inject NavigationManager navManager
+@if (tourists is null)
+{
+    <div>Loading...</div>
+}
+else
+{
+    <div class="row">
+        <div class="col-9">
+            <h3 style="text-align:center">Are you sure to delete?</h3>
+            <hr />
+
+            <div class="form-group row mb-1">
+                <label for="@tourists.TouristName" class="col-form-label col-form-label-sm col-2 text-end">Tourist Name</label>
+                <div class="col-4">
+                    @tourists.TouristName
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@tourists.BookingDate" class="col-form-label col-form-label-sm col-2 text-end">Booking Date</label>
+                <div class="col-4">
+                    @tourists.BookingDate.ToString("yyyy-MM-dd")
+
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@tourists.TouristOccupation" class="col-form-label col-form-label-sm col-2 text-end">Tourist Occupation</label>
+                <div class="col-4">
+                    @tourists.TouristOccupation
+                </div>
+            </div>
+           <div class="form-group row mb-1">
+                <label for="@tourists.TourPackageId" class="col-form-label col-form-label-sm col-2 text-end">Package Name</label>
+                <div class="col-4">
+                    @tourists.TourPackageId
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@tourists.TouristPicture" class="col-form-label col-form-label-sm col-2 text-end">Tourist Picture</label>
+                <div class="col-4">
+                    <img src="Uploads/@tourists.TouristPicture" style="width: 100px" class="img-thumbnail" />
+
+
+                </div>
+
+            </div>
+            <div class="form-group row mb-1">
+
+                <div class="col-4 offset-2">
+                    <button @onclick="@DeleteIt" type="button" class="btn btn-danger btn-sm">Confirm delete</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12">
+            <a href="/Tourists/List" class="btn btn-link">Back to list</a>
+        </div>
+
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    TouristEdit tourists = null!;
+    private TourPackageDTO[]? tourpackage = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        tourpackage = await this.http.GetFromJsonAsync<TourPackageDTO[]>("api/Tourists/Include");
+        //this.StateHasChanged();
+        var data = await http.GetFromJsonAsync<TouristEdit>($"api/Tourists/{id}");
+        if (data is not null)
+        {
+            tourists = data;
+        }
+    }
+    private async Task DeleteIt()
+    {
+        var response = await this.http.DeleteAsync($"api/Tourists/{id}");
+        navManager.NavigateTo("/Tourists/List");
+    }
+}

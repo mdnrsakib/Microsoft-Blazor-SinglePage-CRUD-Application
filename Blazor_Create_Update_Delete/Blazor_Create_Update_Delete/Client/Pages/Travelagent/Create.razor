@@ -1,0 +1,118 @@
+﻿@page "/TravelAgents/Create"
+@inject HttpClient http
+@inject IToastService toastService
+<div class="row">
+    <div class="col-12">
+        <EditForm Model="@travelagent" OnValidSubmit="SaveTravelAgent">
+            <h3 style="text-align:center">Create TravelAgent</h3>
+            <hr />
+            <DataAnnotationsValidator />
+            
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@travelagent.AgentName">Agent Name</label>
+                <div class="col-7">
+                    <InputText @bind-Value="@travelagent.AgentName" class="form-control" />
+                    <ValidationMessage For="@(()=>travelagent.AgentName)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@travelagent.Email">Email</label>
+                <div class="col-7">
+                    <InputText @bind-Value="@travelagent.Email" class="form-control" />
+                    <ValidationMessage For="@(()=>travelagent.Email)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@travelagent.AgentAddress">Agent Address</label>
+                <div class="col-7">
+                    <InputText @bind-Value="@travelagent.AgentAddress" class="form-control" />
+                    <ValidationMessage For="@(()=>travelagent.AgentAddress)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+               
+                <div class="col-9">
+                    <div class="d-flex justify-content-between" >
+                        <h4 style="text-align:center">Packages</h4>
+                        <hr />
+                        <button @onclick="@AddItem" type="button" class="btn btn-primary btn-sm m-1"><i class="bi bi-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            @foreach(var oi in travelagent.AgentTourPackages)
+            {
+                int i = 0;
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-1 text-end" for="@travelagent.TravelAgentId">Packages</label>
+                    <div class="col-3">
+                        <InputSelect @bind-Value="oi.TourPackageId" class="form-select">
+                            <option value="">Select</option>
+                            @if (tourpackage is not null)
+                            {
+                                foreach (var p in tourpackage)
+                                {
+                                    <option value="@p.TourPackageId">@p.PackageName</option>
+                                }
+                            }
+                        </InputSelect>
+                        <ValidationMessage For="@(()=>oi.TourPackageId)" class="text-danger" />
+                    </div>
+                   
+                    <div class="col-1">
+                        <button @onclick="@(()=>RemoveItem(i++))" type="button" class="btn btn-secondary btn-sm">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            }
+            <div class="form-group row mb-1">
+
+                <div class="col-9">
+                   <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Save the order</button>
+                   </div>
+                </div>
+            </div>
+        </EditForm>
+    </div>
+    <div class="col-12">
+        <a href="/TravelAgents/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    private TravelAgentDTO travelagent = new();
+    private TourPackageDTO[]? tourpackage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        travelagent.AgentTourPackages.Add(new AgentTourPackagesDTO());
+        var data = await this.http.GetFromJsonAsync<TourPackageDTO[]>("api/TourPackages");
+        this.tourpackage = data;
+
+    }
+    private void AddItem()
+    {
+        travelagent.AgentTourPackages.Add(new AgentTourPackagesDTO());
+    }
+    private void RemoveItem(int index)
+    {
+        if (travelagent.AgentTourPackages.Count > 1)
+            ((List<AgentTourPackagesDTO>)travelagent.AgentTourPackages).RemoveAt(travelagent.AgentTourPackages.Count-1);
+    }
+    private async Task SaveTravelAgent()
+    {
+        var response = await http.PostAsJsonAsync("api/TravelAgents/DTO", travelagent);
+        if (response.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data saved successfully", "Success");
+            travelagent = new();
+            travelagent.AgentTourPackages.Add(new AgentTourPackagesDTO());
+        }
+        else
+        {
+            toastService.ShowError("Failed to data.", "Error");
+        }
+        await Task.CompletedTask;
+    }
+}

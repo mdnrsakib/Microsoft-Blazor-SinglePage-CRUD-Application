@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.Toast" Version="3.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Blazor_Create_Update_Delete.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Tourists\List.razor" />
+    <None Include="Pages\Tourpackages\Create.razor" />
+    <None Include="Pages\Tourpackages\Edit.razor" />
+    <None Include="Pages\Tourpackages\List.razor" />
+    <None Include="Pages\Travelagent\Create.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Tourpackages\Create.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Tourpackages\Create.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Tourpackages\Edit.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Travelagent\Create.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Tourpackages\Edit.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Travelagent\Create.razor" />
+  </ItemGroup>
+
+</Project>

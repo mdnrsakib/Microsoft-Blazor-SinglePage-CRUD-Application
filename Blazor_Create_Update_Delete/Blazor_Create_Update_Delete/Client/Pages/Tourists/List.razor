@@ -1,0 +1,62 @@
+﻿@page "/Tourists/List"
+
+@inject HttpClient http
+@inject IConfiguration config
+<div class="row">
+    <div class="col-12">
+        <h3 style="text-align:center">Tourists</h3><hr />
+        <div class="d-flex justify-content-end mb-1">
+            <NavLink class="btn btn-primary btn-sm" href="/Tourists/Create">Create New</NavLink>
+        </div>
+        @if (tourists is null)
+        {
+            <div>Loading</div>
+        }
+        else if (tourists.Length == 0)
+        {
+            <div class="alert alert-warning" role="alert">
+                No employee record found!
+            </div>
+        }
+        else
+        {
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th></th>
+                        <th>Tourist Name</th>
+                        <th>Booking Date</th>
+                        <th>Tourist Occupation</th>
+                        <th>Package Name</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var emp in tourists)
+                    {
+                        <tr>
+                            <td><img style="width:40px" src="/Uploads/@emp.TouristPicture" class="rounded-circle" /></td>
+                            <td>@emp.TouristName</td>
+                            <td>@emp.BookingDate.ToString("yyyy-MM-dd")</td>
+                            <td>@emp.TouristOccupation</td>
+                            <td>@emp.PackageName </td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="/Tourists/Edit/@emp.TouristId">Edit</a>
+                                <a class="btn btn-danger btn-sm" href="/Tourists/Delete/@emp.TouristId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@code {
+    private TouristDTO[]? tourists;
+    protected override async Task OnInitializedAsync()
+    {
+        this.tourists = await this.http.GetFromJsonAsync<TouristDTO[]>("api/Tourists/Include");
+    }
+
+}

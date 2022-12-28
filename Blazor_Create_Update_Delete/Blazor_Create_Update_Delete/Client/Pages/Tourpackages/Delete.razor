@@ -1,0 +1,76 @@
+﻿@page "/TourPackages/Delete/{id:int}"
+@inject HttpClient http
+@inject IToastService toastService
+@inject NavigationManager nav
+<div class="row">
+    <div class="col-12">
+        @if (tourpackage is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <EditForm Model="@tourpackage" OnValidSubmit="DeleteTourPackage">
+                <h3 style="text-align:center">Are you sure to delete</h3><hr />
+                <DataAnnotationsValidator />
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@tourpackage.PackageName">Customer name</label>
+                    <div class="col-4">
+                        @tourpackage.PackageName
+
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@tourpackage.PackageCategory">Address</label>
+                    <div class="col-4">
+                        @tourpackage.PackageCategory
+
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@tourpackage.CostPerPerson">Email</label>
+                    <div class="col-4">
+                        @tourpackage.CostPerPerson
+
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@tourpackage.TourTime">Email</label>
+                    <div class="col-4">
+                        @tourpackage.TourTime
+
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+
+                    <div class="col-4 offset-2">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+
+                    </div>
+                </div>
+            </EditForm>
+        }
+    </div>
+    <div class="col-12">
+        <a href="/TourPackages/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    private TourPackage? tourpackage = default!;
+    protected override async Task OnInitializedAsync()
+    {
+        tourpackage = await http.GetFromJsonAsync<TourPackage>($"api/TourPackages/{id}");
+    }
+    private async Task DeleteTourPackage()
+    {
+        var respose = await http.DeleteAsync($"api/TourPackages/{id}");
+        if (respose.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data deleted successsfully", "Success");
+            nav.NavigateTo("/TourPackages/List");
+        }
+    }
+}

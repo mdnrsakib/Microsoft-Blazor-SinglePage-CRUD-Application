@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Blazor_Create_Update_Delete.Client.props" />
+</Project>

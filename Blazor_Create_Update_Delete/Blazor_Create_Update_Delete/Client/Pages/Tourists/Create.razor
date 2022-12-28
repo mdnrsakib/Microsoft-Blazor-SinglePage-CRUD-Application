@@ -1,0 +1,138 @@
+﻿@page "/Tourists/Create"
+@using System.Net.Http.Headers;
+
+@inject IToastService toastService
+@inject HttpClient http;
+@inject NavigationManager navManager
+
+<div class="row">
+    <div class="col-12">
+        <h3 style="text-align:center">Create Tourists</h3><hr />
+        <EditForm Model="@tourists" OnValidSubmit="SaveAsync">
+            <DataAnnotationsValidator />
+            <div class="form-group row mb-1">
+                <label for="@tourists.TouristName" class="col-form-label col-form-label-sm col-2 text-end">Tourist Name</label>
+                <div class="col-4">
+                    <InputText @bind-Value="tourists.TouristName" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> tourists.TouristName)" class="text-danger" />
+                </div>
+            </div>
+            
+            <div class="form-group row mb-1">
+                <label for="@tourists.BookingDate" class="col-form-label col-form-label-sm col-2 text-end">Booking Date</label>
+                <div class="col-4">
+                    <InputDate @bind-Value="tourists.BookingDate" Type="InputDateType.Date" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> tourists.BookingDate)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@tourists.TouristOccupation" class="col-form-label col-form-label-sm col-2 text-end">Tourist Occupation</label>
+                <div class="col-4">
+                    <InputText @bind-Value="tourists.TouristOccupation" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> tourists.TouristOccupation)" class="text-danger" />
+                </div>
+            </div>
+            <div class="row form-group mb-1">
+                <label class="col-form-label col-form-label-sm col-2 text-end">Package Name</label>
+                <div class="col-4">
+                    <InputSelect @bind-Value="@tourists.TourPackageId" class="form-select form-select-sm">
+                        <option value="">Select</option>
+                        @if (tourpackage != null)
+                        {
+                            foreach (var g in tourpackage)
+                            {
+                                <option value="@g.TourPackageId">@g.PackageName</option>
+                            }
+                        }
+                    </InputSelect>
+                    <ValidationMessage class="text-danger small" For="@(()=> tourists.TourPackageId)" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@tourists.TouristPicture" class="col-form-label col-form-label-sm col-2 text-end">Tourist Picture</label>
+                <div class="col-4">
+                    <InputFile OnChange="@OnInputFileChange" class="form-control form-control-sm" />
+                    <input type="hidden" @bind="tourists.TouristPicture" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> tourists.TouristPicture)" class="text-danger" />
+                </div>
+            </div>
+           
+            <div class="form-group row mb-1">
+
+                <div class="col-4 offset-2">
+                    <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                </div>
+            </div>
+        </EditForm>
+    </div>
+    <div class="col-12">
+        <a href="/Tourists/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+@code {
+    TouristDTO tourists = new();
+    IBrowserFile? selectedFile;
+    string? fileSelectMessage;
+    private TourPackageDTO[]? tourpackage = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var data = await this.http.GetFromJsonAsync<TourPackageDTO[]>("api/Tourists/Include");
+        this.tourpackage = data;
+
+    }
+
+
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.File;
+        tourists.TouristPicture = e.File.Name;
+        fileSelectMessage = null;
+        //this.StateHasChanged();
+    }
+    private async Task SaveAsync()
+    {
+
+        if (tourists is not null)
+        {
+
+
+            var saveImage = await UploadItAsysnc();
+            tourists.TouristPicture = saveImage.StoredFileName;
+            var response = await http.PostAsJsonAsync<TouristDTO>("api/Tourists", tourists);
+            var emp = await response.Content.ReadFromJsonAsync<TouristDTO>();
+            if (response.IsSuccessStatusCode)
+            {
+                toastService.ShowSuccess("Data saved successsfully", "Success");
+                tourists = new();
+            }
+            //navManager.NavigateTo("/Tourists/List");
+        }
+
+
+    }
+    private async Task<ImageUploadResponse> UploadItAsysnc()
+    {
+        using (var ms = new MemoryStream())
+        {
+
+            if (selectedFile is not null)
+            {
+                var content = new MultipartFormDataContent();
+                var fileContent = new StreamContent(selectedFile.OpenReadStream(long.MaxValue));
+
+                fileContent.Headers.ContentType = new MediaTypeHeaderValue(selectedFile.ContentType);
+                content.Add(content: fileContent, name: "\"file\"", fileName: selectedFile.Name);
+                var response = await http.PostAsync("api/Tourists/Upload", content);
+                var r = await response.Content.ReadFromJsonAsync<ImageUploadResponse>();
+                return r == null ? new ImageUploadResponse() : r;
+            }
+            else
+            {
+                return new ImageUploadResponse();
+            }
+
+        }
+    }
+
+}

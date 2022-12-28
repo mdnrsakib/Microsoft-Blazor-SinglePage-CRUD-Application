@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Blazor_Create_Update_Delete.Client
+build_property.RootNamespace = Blazor_Create_Update_Delete.Client
+build_property.ProjectDir = J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = J:\Blazor_Create_Update_Delete\Blazor_Create_Update_Delete\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Components/ModalDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbERpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourists/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cmlzdHNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourists/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cmlzdHNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourists/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cmlzdHNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourists/List.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cmlzdHNcTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourpackages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cnBhY2thZ2VzXENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourpackages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cnBhY2thZ2VzXERlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourpackages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cnBhY2thZ2VzXEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Tourpackages/List.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG91cnBhY2thZ2VzXExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Travelagent/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhdmVsYWdlbnRcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Travelagent/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhdmVsYWdlbnRcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Travelagent/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhdmVsYWdlbnRcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Travelagent/List.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhdmVsYWdlbnRcTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Blazor_Create_Update_Delete/Blazor_Create_Update_Delete/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c67dmnq3lx
